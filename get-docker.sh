@@ -103,7 +103,7 @@ if [ -z "$REPO_FILE" ]; then
 	REPO_FILE="$DEFAULT_REPO_FILE"
 fi
 
-mirror=''
+mirror='Aliyun'
 DRY_RUN=${DRY_RUN:-}
 while [ $# -gt 0 ]; do
 	case "$1" in
@@ -546,7 +546,7 @@ do_install() {
 				if ! is_dry_run; then
 					set -x
 				fi
-				$sh_c "DEBIAN_FRONTEND=noninteractive apt-get install -y -qq $pkgs >/dev/null"
+				$sh_c "DEBIAN_FRONTEND=noninteractive apt-get install -y $pkgs >/dev/null"
 			)
 			echo_docker_as_nonroot
 			exit 0
