@@ -1,6 +1,5 @@
 
 ```
 curl -fsSL https://get.sss.ms/docker.sh -o get-docker.sh
-sh get-docker.sh --mirror aliyun
+sh get-docker.sh --mirror Aliyun
 ```
-# get.sss.ms
