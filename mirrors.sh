@@ -46,7 +46,7 @@ configure_docker() {
     
     # Create or update Docker daemon config
     echo '{
-  "registry-mirrors": ["https://docker.aliyun-inc.com"]
+  "registry-mirrors": ["https://docker.aliyun-inc.co"]
 }' | $SUDO tee "$DOCKER_CONFIG" > /dev/null
     
     # Restart Docker daemon if not in container

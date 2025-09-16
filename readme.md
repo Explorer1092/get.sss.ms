@@ -48,13 +48,20 @@ sh get-docker.sh --mirror Aliyun
 ### Linux 一条命令：设置 Docker 加速/翻墙地址为 docker.aliyun-inc.co（无外部脚本）
 
 ```
-sudo mkdir -p /etc/docker && echo '{"registry-mirrors":["https://docker.aliyun-inc.co"]}' | sudo tee /etc/docker/daemon.json >/dev/null && sudo systemctl daemon-reload && sudo systemctl restart docker
+sudo mkdir -p /etc/docker && echo '{"registry-mirrors":["https://docker.aliyun-inc.com"]}' | sudo tee /etc/docker/daemon.json >/dev/null && sudo systemctl daemon-reload && sudo systemctl restart docker
 ```
 
 ### 备选（仅需传入地址）：使用 DaoCloud 一条命令
 
 ```
-curl -sSL https://get.sss.ms/set_mirror.sh | sudo sh -s https://docker.aliyun-inc.co && sudo systemctl daemon-reload && sudo systemctl restart docker
+curl -sSL https:/w/get.sss.ms/set_mirror.sh | sudo sh -s https://docker.aliyun-inc.com && sudo systemctl daemon-reload && sudo systemctl restart docker
 ```
 
 提示：上述第一条命令会覆盖现有的 `/etc/docker/daemon.json`。如需保留其他配置，可先备份或使用 `jq` 合并配置后再重启 Docker。
+
+
+## nodejs
+```
+curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
+sudo apt install -y nodejs
+```
